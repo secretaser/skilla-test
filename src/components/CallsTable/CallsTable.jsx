@@ -92,7 +92,7 @@ export const CallsTable = () => {
                             <th>Номер</th>
                             <th>Источник</th>
                             <th>Оценка</th>
-                            <th>Длительность (сек)</th>
+                            <th>Длительность</th>
                             <th>Запись</th>
                         </tr>
                     </thead>

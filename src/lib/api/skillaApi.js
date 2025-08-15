@@ -1,5 +1,4 @@
 const API_BASE = "https://api.skilla.ru"
-const TOKEN = "testtoken"
 
 async function apiPost(endpoint, queryParams = {}) {
     const queryString = new URLSearchParams(
@@ -14,7 +13,7 @@ async function apiPost(endpoint, queryParams = {}) {
     const res = await fetch(url, {
         method: "POST",
         headers: {
-            "Authorization": `Bearer ${TOKEN}`,
+            "Authorization": `Bearer ${import.meta.env.VITE_API_TOKEN}`,
             "Content-Type": "application/json"
         }
     })
@@ -52,7 +51,7 @@ export async function getCallRecord(recordId, partnershipId) {
     const res = await fetch(url, {
         method: "POST",
         headers: {
-            "Authorization": `Bearer ${TOKEN}`
+            "Authorization": `Bearer ${import.meta.env.VITE_API_TOKEN}`
         }
     })
 
